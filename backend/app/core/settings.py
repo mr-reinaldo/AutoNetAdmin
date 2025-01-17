@@ -22,8 +22,7 @@ class Settings(BaseSettings):
     )
 
     # DATABASE ENVIRONMENT VARIABLES
-    DATABASE_URL_DEV: str = env_config("DATABASE_URL_DEV", cast=str)
-    DATABASE_URL_PROD: str = env_config("DATABASE_URL_PROD", cast=str)
+    DATABASE_URL: str = env_config("DATABASE_URL", cast=str)
     ECHO_SQLALCHEMY: bool = env_config("ECHO_SQLALCHEMY", cast=bool)
 
     # JWT ENVIRONMENT VARIABLES

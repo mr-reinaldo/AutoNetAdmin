@@ -6,11 +6,13 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "aiosqlite>=0.20.0",
+    "alembic>=1.14.0",
     "fastapi[standard]>=0.115.6",
     "orjson>=3.10.14",
     "pydantic-extra-types>=2.10.2",
     "pydantic-settings>=2.7.1",
     "python-decouple>=3.8",
+    "sqlalchemy>=2.0.37",
     "uvicorn[standard]>=0.34.0",
 ]
 
