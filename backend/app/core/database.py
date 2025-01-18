@@ -1,12 +1,13 @@
-from sqlalchemy.ext.asyncio import (
-    AsyncSession,
-    create_async_engine,
-    AsyncEngine,
-    async_sessionmaker,
-)
-from app.core.settings import settings
 from typing import AsyncGenerator
 
+from sqlalchemy.ext.asyncio import (
+    AsyncEngine,
+    AsyncSession,
+    async_sessionmaker,
+    create_async_engine,
+)
+
+from app.core.settings import settings
 
 engine: AsyncEngine = create_async_engine(
     url=settings.DATABASE_URL, echo=settings.ECHO_SQLALCHEMY

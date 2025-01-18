@@ -9,8 +9,7 @@ from app.models.base_model import mapper_registry
 
 @mapper_registry.mapped_as_dataclass
 class User:
-
-    __tablename__ = "users"
+    __tablename__ = 'users'
 
     id: Mapped[UUID] = mapped_column(
         init=False,
@@ -29,9 +28,9 @@ class User:
     )
 
     devices = relationship(
-        "Device",
-        back_populates="user",
-        lazy="joined",
+        'Device',
+        back_populates='user',
+        lazy='joined',
         uselist=True,
-        cascade="all, delete-orphan",
+        cascade='all, delete-orphan',
     )
